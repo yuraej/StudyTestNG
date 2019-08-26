@@ -25,7 +25,7 @@ public class SumOperation {
             dataProvider = "dataForTest")
     public void checkSumOperation(double result, double number1, double number2) throws InterruptedException {
         assertEquals(result, calc.summarize(number1, number2));
-        Thread.sleep(1500);
+        Thread.sleep(5000);
     }
 
     @DataProvider(parallel = true)
