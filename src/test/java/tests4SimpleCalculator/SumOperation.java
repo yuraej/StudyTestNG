@@ -11,13 +11,13 @@ import java.util.Arrays;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class SumOperation {
-    private SimpleCalculator calc;
+public class SumOperation extends BaseTest {
+  /*  private SimpleCalculator calc;
 
     @BeforeClass
     public void getCopy() {
         calc = new SimpleCalculator();
-    }
+    }*/
 
     @Test(priority = 1,
             groups = {"not simple", "the increment operation"},
@@ -25,7 +25,7 @@ public class SumOperation {
             dataProvider = "dataForTest")
     public void checkSumOperation(double result, double number1, double number2) throws InterruptedException {
         assertEquals(result, calc.summarize(number1, number2));
-        Thread.sleep(5000);
+        Thread.sleep(500);
     }
 
     @DataProvider(parallel = true)

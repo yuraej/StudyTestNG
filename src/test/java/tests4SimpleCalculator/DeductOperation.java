@@ -7,13 +7,13 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class DeductOperation {
-    SimpleCalculator calc;
+public class DeductOperation extends BaseTest{
+    /*SimpleCalculator calc;
 
     @BeforeClass
     public void getCopy() {
         calc = new SimpleCalculator();
-    }
+    }*/
 
     @Test(priority = 1,
             groups = {"not simple", "the reduction operation"},

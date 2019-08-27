@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Test suite" parallel="tests">
+<suite  name="Test suite">
     <test name="test 1">
         <groups>
             <run>
                 <include name="simple test" />
             </run>
         </groups>
-    </test> <!-- Test -->
+        <classes>
+            <class name="tests4SimpleCalculator.SumOperation"/>
+            <class name="tests4SimpleCalculator.MultiPlayOperation"/>
+            <class name="tests4SimpleCalculator.DeductOperation"/>
+            <class name="tests4SimpleCalculator.AllOperations"/>
+        </classes>
+    </test>
+    <test name="test 2">
+        <groups>
+            <run>
+                <include name="the increment operation" />
+            </run>
+        </groups>
+        <classes>
+            <class name="tests4SimpleCalculator.SumOperation"/>
+            <class name="tests4SimpleCalculator.MultiPlayOperation"/>
+            <class name="tests4SimpleCalculator.DeductOperation"/>
+            <class name="tests4SimpleCalculator.AllOperations"/>
+        </classes>
+    </test>
 </suite>

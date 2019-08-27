@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite  name="Test suite" parallel="tests">
-    <test name="enter data in RemainDivide">
+    <test name="TEST: enter data in RemainDivide">
         <classes>
             <class name="tests4SimpleCalculator.RemainderDivide"/>
             <parameter name="result" value="2"/>
@@ -9,13 +9,11 @@
             <parameter name="number2" value="3"/>
         </classes>
     </test>
-    <test name="run all tests">
+    <test name="TEST: run all tests">
         <classes>
             <class name="tests4SimpleCalculator.SumOperation"/>
             <class name="tests4SimpleCalculator.MultiPlayOperation"/>
             <class name="tests4SimpleCalculator.DeductOperation"/>
-            <class name="tests4SimpleCalculator.RemainderDivide"/>
-            <class name="tests4SimpleCalculator.DivideOperation"/>
             <class name="tests4SimpleCalculator.AllOperations"/>
         </classes>
     </test>

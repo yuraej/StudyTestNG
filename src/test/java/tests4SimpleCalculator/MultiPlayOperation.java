@@ -9,24 +9,22 @@ import org.w3c.dom.ls.LSOutput;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class MultiPlayOperation {
-    SimpleCalculator calc;
+public class MultiPlayOperation extends BaseTest{
+   /* SimpleCalculator calc;
 
     @BeforeClass
     public void getCopy() {
         calc = new SimpleCalculator();
-    }
+    }*/
 
     @Test(priority = 1,
             groups = {"not simple", "the increment operation"},
             description = "check multi play  operation with a lot of data",
             dataProvider = "dataForTest",
-            invocationCount = 10, threadPoolSize = 2)
-    public void checkDeductOperation(double result, double number1, double number2) throws InterruptedException {
-
+            invocationCount = 3, threadPoolSize = 3)
+    public void checkMultiPlayOperation(double result, double number1, double number2) throws InterruptedException {
         assertEquals(result, calc.multiply(number1, number2));
-        Thread.sleep(15000);
-
+        Thread.sleep(1500);
     }
 
     @DataProvider(parallel = true)
