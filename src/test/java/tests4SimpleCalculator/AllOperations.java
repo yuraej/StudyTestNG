@@ -1,4 +1,4 @@
-package tests4SimpleCalculator.simpleTests;
+package tests4SimpleCalculator;
 
 import codeUnderTest.SimpleCalculator;
 import org.testng.annotations.AfterClass;
@@ -9,11 +9,11 @@ import org.testng.annotations.BeforeMethod;
 import static org.testng.AssertJUnit.assertEquals;
 
 @org.testng.annotations.Test(priority = 0,
-        groups = "simple tests",
+        groups = "simple test",
         description = "run all operations with a single data pair",
         invocationCount = 3)
-public class AllOperations {
-    SimpleCalculator calc;
+public class AllOperations extends BaseTest{
+   /* SimpleCalculator calc;
     int counter = 1;
 
     @BeforeClass
@@ -36,7 +36,7 @@ public class AllOperations {
     @AfterMethod
     public void endTest() {
         System.out.println("Тест номер " + (counter - 1) + " отработал");
-    }
+    }*/
 
     public void checkSumOperation() {
         assertEquals(3.0, calc.summarize(1, 2));
